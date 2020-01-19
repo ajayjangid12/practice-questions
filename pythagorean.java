@@ -1,5 +1,5 @@
 import java.util.*;  
-public class pythagorean {
+public class abcd {
 
 	public static void main(String[] args) {
       Scanner sc=new Scanner(System.in);
@@ -18,13 +18,20 @@ public class pythagorean {
       int flag=0;
       for(int i=0;i<n-2;i++)
       {
-    	  int sum=arr[i]*arr[i]+arr[i+1]*arr[i+1];
-    	  if(sum==arr[i+2]*arr[i+2])
+    	  int sum=arr[i]*arr[i];
+    	  for(int k=i+1;k<n-1;k++)
+    	  {
+    		  sum=sum+arr[k]*arr[k];
+    		  for(int l=k+1;l<n;l++)
+    		  {  
+    	  if(sum==arr[l]*arr[l])
     	  {
     		  flag=1;
     	  }
     	  else {
     		  continue;
+    	  }
+    		  }
     	  }
       }
       if(flag==1)
